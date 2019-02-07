@@ -1,0 +1,10 @@
+FROM ruby:2.6.1
+
+RUN mkdir src
+COPY ./src /src
+WORKDIR /src
+RUN bundle install
+
+EXPOSE 9292/tcp
+ENTRYPOINT ["bundle", "exec"]
+CMD ["rackup", "--host", "0.0.0.0"]
