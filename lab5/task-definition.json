@@ -1,0 +1,20 @@
+{
+  "executionRoleArn": "arn:aws:iam::424328483274:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "paws-demo",
+      "image": "424328483274.dkr.ecr.us-west-2.amazonaws.com/pgh-aws-users-demo",
+      "cpu": 256,
+      "memory": 512,
+      "essential": true
+    }
+  ],
+  "family": "paws-demo",
+  "memory": "512",
+  "taskRoleArn": "arn:aws:iam::424328483274:role/ecsTaskExecutionRole",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "cpu": "256"
+}
